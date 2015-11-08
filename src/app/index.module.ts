@@ -10,6 +10,7 @@ import { GithubContributor } from '../app/components/githubContributor/githubCon
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { acmeNavbar } from '../app/components/navbar/navbar.directive';
 import { acmeMalarkey } from '../app/components/malarkey/malarkey.directive';
+import { actionBarDirective } from '../app/components/now-showing-action-bar/action-bar.directive';
 
 declare var malarkey: any;
 declare var moment: moment.MomentStatic;
@@ -32,5 +33,7 @@ module swiipFullstack {
     .controller('NowShowingController', NowShowingController)
     .controller('NowShowingTodayController', NowShowingTodayController)
     .directive('acmeNavbar', acmeNavbar)
-    .directive('acmeMalarkey', acmeMalarkey);
+    .directive('acmeMalarkey', acmeMalarkey)
+    .directive('actionBar', actionBarDirective);
+
 }
