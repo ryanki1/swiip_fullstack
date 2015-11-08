@@ -1,0 +1,14 @@
+.nowShowing {
+  height: 100%;
+}
+.nowShowing .splash {
+  font-size: 40;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #8b0000;
+}
+.nowShowing md-toolbar.md-default-theme:not(.md-menu-toolbar),
+.nowShowing md-toolbar:not(.md-menu-toolbar) .md-button {
+  font-weight: bold;
+  color: #000;
+}

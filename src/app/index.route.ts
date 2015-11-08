@@ -1,7 +1,11 @@
 /** @ngInject */
-export function routerConfig($componentLoaderProvider: any) {
-  $componentLoaderProvider.setTemplateMapping(function(name: String) {
-    return 'app/' + name + '/' + name + '.html';
+export function routerConfig($componentLoaderProvider: any, _: _.LoDashStatic) {
+  $componentLoaderProvider.setTemplateMapping((name: string) => {
+    if (name === 'main') {
+      return 'app/' + name + '/' + name + '.html';
+    } else {
+      return 'app/components/' + _.kebabCase(name) + '/' + _.kebabCase(name) + '.html';
+    }
   });
 }
 
@@ -9,7 +13,9 @@ export function routerConfig($componentLoaderProvider: any) {
 export class RouterController {
   constructor($router: any) {
     $router.config([
-      { path: '/', component: 'main' }
+      { path: '/', component: 'main' },
+      { path: '/nowShowing', component: 'nowShowing'},
+      { path: '/nowShowingToday', component: 'nowShowingToday'}
     ]);
   }
 }
