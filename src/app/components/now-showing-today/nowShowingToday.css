@@ -1,9 +1,12 @@
 .nowShowingToday {
   height: 100%;
 }
-.showingToday {
+.nowShowingToday .showingToday {
   font-size: 40px;
   text-transform: uppercase;
   background: url("/assets/images/minions2.jpeg") no-repeat center center fixed;
   background-size: content;
+}
+.nowShowingToday .show-time {
+  font-family: 'Roboto Condensed Bold', Helvetica, sans-serif;
 }

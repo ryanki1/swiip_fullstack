@@ -3,9 +3,13 @@
 
 div.nowShowing(layout="column" ng-controller="NowShowingController as vm")
    md-toolbar
-   md-content(flex layout layout-align="center center").splash Philip's Kino
+   md-content(flex layout layout-align="center center").splash
+      h1.md-display-2.
+         Philips Kino
    md-toolbar(layout layout-align="end center")
-      md-button.md-raised.showing-btn(ng-link="nowShowingToday({})") Today
+      md-button.md-raised.showing-btn(ng-link="nowShowingToday({})")
+         span.
+            Heute
 
 
 
